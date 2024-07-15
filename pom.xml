@@ -30,11 +30,7 @@
     <artifactId>selenium-java</artifactId>
     <version>4.19.1</version>
 </dependency>
-<dependency>
-    <groupId>org.testng</groupId>
-    <artifactId>testng</artifactId>
-    <version>6.14.3</version>
-</dependency>
+
 <!-- https://mvnrepository.com/artifact/io.github.bonigarcia/webdrivermanager -->
 <dependency>
     <groupId>io.github.bonigarcia</groupId>
@@ -45,7 +41,7 @@
 <dependency>
     <groupId>org.testng</groupId>
     <artifactId>testng</artifactId>
-    <version>7.10.1</version>
+    <version>7.10.2</version>
     <scope>test</scope>
 </dependency>
 <!-- https://mvnrepository.com/artifact/ru.stqa.selenium/webdriver-factory -->
@@ -53,6 +49,24 @@
     <groupId>ru.stqa.selenium</groupId>
     <artifactId>webdriver-factory</artifactId>
     <version>4.4</version>
+</dependency>
+<!-- https://mvnrepository.com/artifact/com.aventstack/extentreports -->
+<dependency>
+    <groupId>com.aventstack</groupId>
+    <artifactId>extentreports</artifactId>
+    <version>5.0.9</version>
+</dependency>
+<!-- https://mvnrepository.com/artifact/org.apache.poi/poi-ooxml -->
+<dependency>
+    <groupId>org.apache.poi</groupId>
+    <artifactId>poi-ooxml</artifactId>
+    <version>5.2.5</version>
+</dependency>
+<!-- https://mvnrepository.com/artifact/org.apache.poi/poi -->
+<dependency>
+    <groupId>org.apache.poi</groupId>
+    <artifactId>poi</artifactId>
+    <version>5.2.3</version>
 </dependency>
 
   </dependencies>

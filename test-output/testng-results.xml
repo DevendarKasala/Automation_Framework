@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results ignored="0" total="2" passed="2" failed="0" skipped="0">
+  <reporter-output>
+  </reporter-output>
+  <suite started-at="2024-07-12T14:33:52 IST" name="Default suite" finished-at="2024-07-12T14:34:03 IST" duration-ms="10561">
+    <groups>
+    </groups>
+    <test started-at="2024-07-12T14:33:52 IST" name="Default test" finished-at="2024-07-12T14:34:03 IST" duration-ms="10561">
+      <class name="AutomationFramework.Tests.LoginTest">
+        <test-method is-config="true" signature="setupBrowser()[pri:0, instance:AutomationFramework.Tests.LoginTest@1e6a3214]" started-at="2024-07-12T14:33:52 IST" name="setupBrowser" finished-at="2024-07-12T14:33:56 IST" duration-ms="4172" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setupBrowser -->
+        <test-method signature="loginPageObject()[pri:1, instance:AutomationFramework.Tests.LoginTest@1e6a3214]" started-at="2024-07-12T14:33:57 IST" name="loginPageObject" finished-at="2024-07-12T14:34:00 IST" duration-ms="3192" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- loginPageObject -->
+        <test-method signature="ErrorValidationLogin()[pri:2, instance:AutomationFramework.Tests.LoginTest@1e6a3214]" started-at="2024-07-12T14:34:00 IST" name="ErrorValidationLogin" finished-at="2024-07-12T14:34:03 IST" duration-ms="3123" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- ErrorValidationLogin -->
+      </class> <!-- AutomationFramework.Tests.LoginTest -->
+    </test> <!-- Default test -->
+  </suite> <!-- Default suite -->
+</testng-results>

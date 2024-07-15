@@ -46,6 +46,8 @@ public class BaseClass {
 		chromeoptions.setExperimentalOption("prefs", prefs);
 		
 		return chromeoptions;
+		
+		
 	}
 	
 	

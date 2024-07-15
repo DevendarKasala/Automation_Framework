@@ -19,11 +19,11 @@ public class LoginPage {
 	WebDriverWait wait =new WebDriverWait(driver, Duration.ofSeconds(10));
 	
 	//Email Text Box
-	@FindBy(xpath = "//input[@name='email']")
+	@FindBy(xpath = "//input[@placeholder='Email ID / Mobile Number']")
 	static WebElement enterEmail;
 	
 	//Password field
-	@FindBy(xpath = "//input[@name='password']")
+	@FindBy(xpath = "//input[@type='password']")
 	WebElement enterPassword;
 	
 	//Login button
@@ -45,8 +45,16 @@ public class LoginPage {
 	public void enterEmailId(String email) {
 		enterEmail.sendKeys(email);
 	}
+	
+	public void clickPassword() {
+		enterPassword.click();
+	}
 	public void enterPassword(String password) {
 		enterPassword.sendKeys(password);
+	}
+	
+	public void clickNextButton() {
+		clickLogin.click();
 	}
 	public void clickLoginButton() {
 		clickLogin.click();
@@ -67,6 +75,9 @@ public class LoginPage {
 	//login actions
 	public void Login(String email, String password) {
 		enterEmailId(email);
+		clickNextButton();
+		wait.until(ExpectedConditions.elementToBeClickable(enterPassword));
+		clickPassword();
 		enterPassword(password);
 		clickLoginButton();
 		
@@ -83,7 +94,7 @@ public class LoginPage {
 	}
 	
 	//Incorrect cred error message
-	@FindBy(xpath = "//div[@class='tab-content']//form/span")
+	@FindBy(xpath = "//div[@class='dsm-inputbox-error-msg ']")
 	public
 	static
 	WebElement validationError;
