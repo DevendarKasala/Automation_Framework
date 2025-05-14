@@ -94,18 +94,16 @@ public class LoginPage extends BaseClass {
 		clickLogoutMenuDashboard();
 		clickLogoutButtonMenu();
 		//wait.until(ExpectedConditions.elementToBeClickable(logoutMenu));
-		clickLogoutButtononPopup();
+		clickLogoutButtononPopup(); 
 		
 	}
 	
 	//Incorrect cred error message
 	@FindBy(xpath = "//div[@class='dsm-inputbox-error-msg ']")
 	public static WebElement validationError;
-	//String loginError =	incorrectCredError.getText();
 	public String incorrectCredErrorMsg() {
 	wait.until(ExpectedConditions.elementToBeClickable(validationError));	
 	return validationError.getText();
-//	String loginError =	validationError.getText();
 	}
 	
 }
