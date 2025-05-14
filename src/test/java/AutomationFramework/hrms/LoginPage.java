@@ -6,21 +6,26 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
+import org.openqa.selenium.support.PageFactory;
+import HRMS.resources.BaseClass;
 
-public class LoginPage {
+
+public class LoginPage extends BaseClass {
 
 	private WebDriver driver;
+	private WebDriverWait wait;
 
 	public LoginPage(WebDriver driver) {
-		super();
-		//this.driver=driver;
-		//PageFactory.initElements(driver, this);
+//		super();
+		this.driver=driver;
+		PageFactory.initElements(driver, this);
+		this.wait = new WebDriverWait(driver, Duration.ofSeconds(10));
 	}
-	WebDriverWait wait =new WebDriverWait(driver, Duration.ofSeconds(10));
+//	WebDriverWait wait =new WebDriverWait(driver, Duration.ofSeconds(10));
 	
 	//Email Text Box
 	@FindBy(xpath = "//input[@placeholder='Email ID / Mobile Number']")
-	static WebElement enterEmail;
+	WebElement enterEmail;
 	
 	//Password field
 	@FindBy(xpath = "//input[@type='password']")
@@ -73,7 +78,7 @@ public class LoginPage {
 	}
 	
 	//login actions
-	public void Login(String email, String password) {
+	public void login(String email, String password) {
 		enterEmailId(email);
 		clickNextButton();
 		wait.until(ExpectedConditions.elementToBeClickable(enterPassword));
@@ -84,7 +89,7 @@ public class LoginPage {
 	}
 	
 	//Logout actions
-	public void LogOut() {
+	public void logOut() {
 		wait.until(ExpectedConditions.elementToBeClickable(logoutMenu));
 		clickLogoutMenuDashboard();
 		clickLogoutButtonMenu();
@@ -95,13 +100,12 @@ public class LoginPage {
 	
 	//Incorrect cred error message
 	@FindBy(xpath = "//div[@class='dsm-inputbox-error-msg ']")
-	public
-	static
-	WebElement validationError;
+	public static WebElement validationError;
 	//String loginError =	incorrectCredError.getText();
-	public void incorrectCredErrorMsg() {
+	public String incorrectCredErrorMsg() {
 	wait.until(ExpectedConditions.elementToBeClickable(validationError));	
-	String loginError =	validationError.getText();
+	return validationError.getText();
+//	String loginError =	validationError.getText();
 	}
 	
 }

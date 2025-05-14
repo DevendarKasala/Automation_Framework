@@ -6,6 +6,7 @@ import java.util.HashMap;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
+
 import io.github.bonigarcia.wdm.WebDriverManager;
 
 public class BaseClass {
@@ -14,7 +15,6 @@ public class BaseClass {
 	
 	
 	public static WebDriver setDriver(String browserName) {
-		
 		
 		if(browserName.equals("CHROME")) {
 			WebDriverManager.chromedriver().setup();
@@ -38,7 +38,7 @@ public class BaseClass {
 		chromeoptions.addArguments("--disable extensions");
 		chromeoptions.addArguments("--no-sandbox");
 		chromeoptions.addArguments("--disable-dev-shm-usage");
-		chromeoptions.addArguments("--window-size=1580, 1280");
+		chromeoptions.addArguments("--window-size=1580,1280");
 		
 		final HashMap<String, Object> prefs = new HashMap();
 		prefs.put("credentials_enable_Service", false);

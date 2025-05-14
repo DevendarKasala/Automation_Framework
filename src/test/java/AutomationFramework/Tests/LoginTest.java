@@ -30,19 +30,19 @@ public class LoginTest {
 	
 	@Test(priority = 1)
 	public void loginPageObject( ) {
-		Loginpage.Login("chetana.r@mewurk.com", "Mewurk@123");
+		Loginpage.login("chetana.r@mewurk.com", "Mewurk@123");
 //		WebDriverWait wait = new WebDriverWait(driver, 10);
 		
 		//wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("(//div[@class='placeholder-initial'])[1]")));
-		Loginpage.LogOut();
+		Loginpage.logOut();
 	}
 	
 	@Test(priority = 2)
-	public void ErrorValidationLogin() throws InterruptedException {
-		Loginpage.Login("chetana.r@mewurk.com", "Mewurk@1");
+	public void errorValidationLogin() throws InterruptedException {
+		Loginpage.login("chetana.r@mewurk.com", "Mewurk@1");
 		Thread.sleep(2000);
 		Assert.assertEquals(LoginPage.validationError.getText(),"Incorrect credentials. Please try again.");
-		if(LoginPage.validationError.getText()=="Incorrect credentials. Please try again") {
+		if(LoginPage.validationError.getText().equals("Incorrect credentials. Please try again")) {
 			
 		System.out.println("ErrorValidation Test is passed");
 	}
