@@ -29,7 +29,7 @@ public class OfficeTest {
 		officesettings = PageFactory.initElements(driver, OfficeSettings.class);
 		driver.get("https://dev-portal.mewurk.com/login");
 		driver.manage().window().maximize();
-		Loginpage.login("admin1@mewurk.com", "Mewurk@123");
+		Loginpage.login("admin1@mewurk.com", "Mewurk@123"); 
 	}
 	
 	@Test
